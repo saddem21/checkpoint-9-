@@ -1,0 +1,35 @@
+algorithme somme éléments distincts
+var
+t1: array_of integer[5];
+t2: array_of integer[5];
+i: integer;
+j: integer;
+k: integer;
+l: integer;
+s1: integer;
+s2: integer;
+s: integer;
+BEGIN
+for i from 0 to 4 do {
+read t1[i];
+}
+for j from 0 to 4 do {
+read t2[j];
+}
+s1:= 0;
+for k from 0 to 4 do {
+if (t1[k] <> t2[0] and t1[0] <> t2[1] and t1[0] <> t2[2] and t1[0] <> t2[3] and t1[0] <> t2[4])
+then {
+s1:= s1 + t1[k];
+}
+}
+s2:= 0;
+for l from 0 to 4 do {
+if (t2[l] <> t1[0] and t2[l] <> t1[1] and t2[l] <> t1[2] and t2[l] <> t1[3] and t2[l] <> t1[4])
+then {
+s2:= s2 + t2[l];
+}
+}
+s:= s1 + s2;
+write ("la somme des éléments distincts est" , s);
+END
